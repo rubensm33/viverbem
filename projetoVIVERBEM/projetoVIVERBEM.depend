@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1670510545 source:c:\temp\projetoviverbem\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+
