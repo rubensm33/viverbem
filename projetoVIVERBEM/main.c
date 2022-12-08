@@ -76,25 +76,6 @@ struct tp_cadastroConsultaJMR
 
 }cad_consulta[50];
 
-//Horas
-/*struct tm
-{
-   int tm_sec;           /
-   int tm_min;
-   int tm_hour;          /
-   int tm_mday;
-   int tm_mon;
-   int tm_year;          /
-   int tm_wday;          //
-   int tm_yday;
-   int tm_isdst;         /
-}*/
-
-struct tm data_hora;
-time_t segundos;
-time(&segundos);
-data_hora = localtime(&segundos);
-printf("%d", data_hora->tm_mday);
 
 
 
@@ -459,7 +440,9 @@ void imprimir_consultasClientesJMR(FILE *arquivoConsulta){
 void imprimir_consultasMedicosJMR(FILE *arquivoConsulta){
     printf("\nDigite o código do médico: ");
     scanf("%d",& s);
-
+for(m = 2; m<50; m++){
+    cad_consulta[m].codigo_medico = 9;
+}
 
     for(m = 0; m<50; m++){
     if(cad_consulta[m].codigo_medico == cad_consulta[s].codigo_medico){
